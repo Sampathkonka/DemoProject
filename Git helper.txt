@@ -13,7 +13,5 @@ Viewieing Configurations:
 1) Goto Dir where you need to intiate GIT
 2) Run "Git init" #creates the Git repository in the current directory
  (Creates a directory structure in the current Dir., Please look for Git Directory structure)
-
-Updating the Git Helper
-
+** Updating the Git Helper in Develop branch
 
