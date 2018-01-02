@@ -95,3 +95,6 @@ We can merge only commit2 using cherry pick
 => List all the commits about to push (Displays commit SHA code, alond with commit names)
 >> git cherry-pick <CommitID-SHA> somebranch => commits to Branch
 
+https://www.codeschool.com/courses/try-git
+https://www.codeschool.com
+
