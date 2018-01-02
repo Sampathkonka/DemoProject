@@ -1,0 +1,17 @@
+$ git config --list
+$ git config --global user.name "Sampath Konka"
+$ git config --global user.email "sampath.konka@accenture.com"
+
+Viewieing Configurations:
+
+1) /etc/gitconfig file
+2) ~/.gitconfig or ~/.config/git/config file
+3) config file in the Git directory (that is .git/config)
+
+** We can also run a cmd "git config --list" to view the configuration.
+
+1) Goto Dir where you need to intiate GIT
+2) Run "Git init" #creates the Git repository in the current directory
+ (Creates a directory structure in the current Dir., Please look for Git Directory structure)
+
+
