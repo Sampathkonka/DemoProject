@@ -13,5 +13,85 @@ Viewieing Configurations:
 1) Goto Dir where you need to intiate GIT
 2) Run "Git init" #creates the Git repository in the current directory
  (Creates a directory structure in the current Dir., Please look for Git Directory structure)
-** Updating the Git Helper in Develop branch
+
+Step 1 (One Time activity)
+
+>> git clone [Repository URL => Get it from GitHub]
+
+ex: git clone https://github.com/Sampathkonka/DemoProject.git
+
+>> git log
+>> git status
+	-> Ready to commit (data in staged area)
+	-> Commited
+	-> Untracked changes (Data moved from staged area to unstaged => reset)
+>> git clean -nfd (n=> no of untracked files, f,d -> files & directory)
+	-> To view the untracked files (code is in working Dir, but not added to stagging area)
+>> git clean -f filename.txt (removes the filename.txt, which is untracked; We can also use "git reset" cmd for the same)
+
+Step 2 (Repeated steps)
+
+>> git add => Staging Area
+
+	git add . => updates all updated project files
+	git add welcome.txt => updates only welcome.txt file to Staging area.
+		>> To commit the chages in local repository => Run git commit
+		>> To unstage the files (uncommit the changes) => "git reset HEAD" or "git reset HEAD filename"
+	git add -p (Displays all the updated files & promts the user which file to add)	
+>> git commit -m "Comment"
+>> git push
+>> git stash
+>> git cherry
+
+
+Staging Area [Buffer area]
+Local Repository [local copy of repository]
+Remote Repository [Remote copy of repository]
+
+Branching: 
+
+Master : 
+Develop
+Release
+testfix
+hotfix
+
+=> create a Branch from GitHub
+=> Run Git pull come out
+>> git branch => To view current branch selected
+>> git branch -a => current branch (green color), other branches
+>> git checkout develop => to switch the branch from master (By default branch is master) to develop
+=> Update code, add, commit & push
+=> We see changes happen in Develop branch, but not in master branch.
+
+Merging code from one Branch to another:
+(develop --> master)
+develop: Source branch
+master: Destination branch
+
+=> Switch to maste
+>> git checkout master
+>> git merge develop
+# We get the conflict, Update the file that are changed manually, CONFLICT (content): Merge conflict in Git helper.txt
+Some time we need to undate numerious files manually, Using Git UI desktop app, we can identify the merged content & change simple
+>> git branch -a --merged => Which branch merged properly
+>> commit & push the code.
+
+>> we can specify branch names while pulling/pushing
+
+>> git push develop
+>> git pull develop
+>> git remote rename origin DemoProject
+>> git push --set -upstream DemoProject develop
+
+cherry pick:
+commit1
+commit2
+commit3
+
+We can merge only commit2 using cherry pick
+
+>> git cherry -v
+=> List all the commits about to push (Displays commit SHA code, alond with commit names)
+>> git cherry-pick <CommitID-SHA> somebranch => commits to Branch
 
