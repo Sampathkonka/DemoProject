@@ -98,3 +98,5 @@ We can merge only commit2 using cherry pick
 https://www.codeschool.com/courses/try-git
 https://www.codeschool.com
 
+Trainer: r.a.perumalasamy
+
